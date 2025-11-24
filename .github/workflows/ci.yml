@@ -10,10 +10,7 @@ on:
 
 jobs:
   code_check:
-    name: Code Quality and Security Scan
-    runs-on: ubuntu-latest
-
-    # ⚠️ 請將 YOUR_GITHUB_USERNAME 替換為您的實際使用者名稱
+    # 調用 reusable workflow（不能同時使用 runs-on）
     uses: shothead6062/ci-workflows/.github/workflows/code-scan.yml@main
     with:
       target_path: '.'
